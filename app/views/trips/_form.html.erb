@@ -1,0 +1,17 @@
+<div class="">
+  <h1><%= @trip ? 'Edit Trip' : 'Create Trip' %></h1>
+  <hr>
+  <div class="">
+    <div class="">
+          <% form_for @trip do |f| %>
+        <div class="">
+          <%= f.label :name %>
+          <%= f.text_field :name, required: true, autofocus: true %>
+        </div>
+        <div class="">
+          <%= f.submit %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
