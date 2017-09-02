@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170901213934) do
     t.string "city", null: false
     t.string "state"
     t.string "country"
+    t.bigint "trip_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

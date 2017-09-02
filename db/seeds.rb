@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+user = User.first
+
+1.times do
+  user.trips.create(name: 'California', duration: '2 weeks')
+end
+
+puts "Trip Seeded For First User!"

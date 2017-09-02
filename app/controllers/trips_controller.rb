@@ -12,12 +12,13 @@ class TripsController < ApplicationController
 
   def new
     @trip = Trip.new
+    render :new
   end
 
   def create
     @trip = Trip.new(trip_params)
     if @trip.save
-      redirect_to @trip, notice: 'Trip added successfully!'
+      redirect_to @trip
     else
       render :new
     end
@@ -46,7 +47,7 @@ class TripsController < ApplicationController
     end
 
     def trip_params
-      params.require(:trip).permit(:name, :duration)
+      params.require(:trip).permit(:name, :duration, :user_id)
     end
 
 end

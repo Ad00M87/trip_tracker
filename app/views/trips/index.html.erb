@@ -1,8 +1,8 @@
-<h1>Trips for: <%= current_user.full_name %> </h1>
+<h2>Your trips:</h2>
 <hr>
 
-<div class="">
-  <%= link_to 'Make a trip', new_trip_path, class: '' %>
+<div class="waves-effect waves-light btn">
+  <%= link_to 'Make a trip', new_trip_path, class: 'white-text' %>
 </div>
 
 
@@ -12,9 +12,11 @@
     <div class="">
       <h1 class=""><%= trip.name %></h1>
       <%= link_to 'Show Trip', trip_path(trip), class: '' %>
+      <%= link_to 'Edit Trip', edit_trip_path(trip), class: '' %>
+      <%= link_to 'Delete Trip', trip_path(trip), method: :delete %>
     </div>
   <% end %>
 </div>
 <% else %>
-  <h3>You need to get out more!</h3>
+  <h3 class="center-align">There are no trips to display. You need to get out more!</h3>
 <% end %>
