@@ -1,0 +1,22 @@
+<h2>Designate Address</h2>
+<%= form_for [@location, @address] do |f| %>
+
+<%= f.label :street %>
+<%= f.text_field :street, required: true, autofocus: true %>
+
+<%= f.label :city %>
+<%= f.text_field :city, required: true %>
+
+<%= f.label :state %>
+<%= f.text_field :state, required: true %>
+
+<%= f.label :zip %>
+<%= f.text_field :zip, required: true %>
+
+<%= f.label :location_id, 'Please do not change this number - it is needed to create a new address' %>
+<%= f.number_field :location_id, :value => @location.id %>
+
+<%= f.submit %>
+</div>
+
+<% end %>
