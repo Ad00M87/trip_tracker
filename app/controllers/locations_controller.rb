@@ -2,7 +2,7 @@ class LocationsController < ApplicationController
   before_action :set_location, except: [:index, :new, :create]
 
   def index
-    @location = current_user.trip.locations
+    @location = Location.all
   end
 
   def show

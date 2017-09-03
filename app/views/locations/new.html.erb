@@ -1,5 +1,4 @@
 <h2>Create Location</h2>
-
 <%= form_for @location do |f| %>
 
 <%= f.label :city %>
@@ -11,11 +10,11 @@
 <%= f.label :country %>
 <%= f.text_field :country, required: true %>
 
+<%= f.label :trip_id %>
+<%= f.number_field :trip_id, :value => trip.id %>
 
+<% @trip = current_user.trip.find(params[:trip_id]) %>
 
-
-
-<div class="waves-effect waves-light btn">
 <%= f.submit %>
 </div>
 

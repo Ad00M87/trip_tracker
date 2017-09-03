@@ -6,7 +6,7 @@
 
   <% @trip.locations.each do |location| %>
     <div class="">
-      <h1><%= location.name %></h1>
+      <h1><%= location.city %></h1>
       <%= link_to 'Show Location', trip_location_path(@trip, location) %>
     </div>
   <% end %>
