@@ -1,8 +1,9 @@
 class LocationsController < ApplicationController
+  before_action :set_trip
   before_action :set_location, except: [:index, :new, :create]
 
   def index
-    @location = Location.all
+    @location = @trip.locations.all
   end
 
   def show
@@ -10,12 +11,12 @@ class LocationsController < ApplicationController
   end
 
   def new
-    @location = Location.new
+    @location = @trip.locations.new
     render :new
   end
 
   def create
-    @location = Location.new(location_params)
+    @location = @trip.locations.new(location_params)
     if @location.save
       redirect_to trip_location_path(@trip, @location)
     else
@@ -41,8 +42,12 @@ class LocationsController < ApplicationController
 
   private
 
+  def set_trip
+      @trip = Trip.find(params[:trip_id])
+    end
+
     def set_location
-      @location = current_user.trip.location.find(params[:id])
+      @location = Location.find(params[:id])
     end
 
     def location_params

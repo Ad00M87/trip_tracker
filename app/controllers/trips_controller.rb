@@ -3,7 +3,7 @@ class TripsController < ApplicationController
 
   def index
     flash[:notice] = 'Welcome to the Trip Tracker!'
-    @trips = current_user.trips
+    @trips= current_user.trips.all
   end
 
   def show
