@@ -1,2 +1,11 @@
-<h1>Addresses#show</h1>
-<p>Find me in app/views/addresses/show.html.erb</p>
+
+<div class="center-align">
+<h3><%= @location.address.street %></h3>
+<h3><%= @location.address.city %>, <%= @location.address.state %> <%= @location.address.zip %></h3>
+</div>
+
+<div class="center-align">
+<%= link_to 'Edit Address', edit_location_address_path(@location, @location.address), class: 'btn' %>
+<%= link_to 'Delete Address', location_address_path(@location, @location.address), method: :delete, class: 'btn' %>
+<%= link_to 'Back to Trips', root_path, class: 'btn' %>
+</div>

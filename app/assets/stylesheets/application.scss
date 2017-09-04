@@ -1,1 +1,12 @@
 @import 'materialize';
+
+.nav-wrapper {
+  background-image: image-url('roadmap.png');
+}
+
+.logo {
+  height: 75%;
+  width: 25%;
+  margin-left: -10px;
+  padding-left: 0;
+}

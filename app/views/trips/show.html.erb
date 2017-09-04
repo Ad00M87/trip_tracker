@@ -1,13 +1,12 @@
-<h2><%= @trip.name %></h2>
-
-<h3><%= @trip.duration %></h3>
+<h2><%= @trip.name %> - <%= @trip.duration %></h3>
 
 
   <% @trip.locations.each do |location| %>
-    <div class="">
-      <h1><%= location.city %></h1>
-      <%= link_to 'Show Location', trip_location_path(@trip, location) %>
+    <div class="inline">
+      <h3><%= location.city %></h3>
+      <%= link_to 'Show Location', trip_location_path(@trip, location), class: 'btn light-blue darken 2' %>
     </div>
   <% end %>
-  <%= link_to 'Add Locations', new_trip_location_path(@trip) %>
-  <%= link_to 'Back to Trips', root_path %>
+  <hr>
+  <%= link_to 'Add Locations', new_trip_location_path(@trip), class: 'btn' %>
+  <%= link_to 'Back to Trips', root_path, class: 'btn' %>

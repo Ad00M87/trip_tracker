@@ -11,9 +11,9 @@
   <% @trips.each do |trip| %>
     <div class="">
       <h1 class=""><%= trip.name %></h1>
-      <%= link_to 'Show Trip', trip_path(trip), class: '' %>
-      <%= link_to 'Edit Trip', edit_trip_path(trip), class: '' %>
-      <%= link_to 'Delete Trip', trip_path(trip), method: :delete %>
+      <%= link_to 'Show Trip', trip_path(trip), class: 'btn' %>
+      <%= link_to 'Edit Trip', edit_trip_path(trip), class: 'btn' %>
+      <%= link_to 'Delete Trip', trip_path(trip), method: :delete, class: 'btn' %>
     </div>
   <% end %>
 </div>
