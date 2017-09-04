@@ -1,13 +1,29 @@
 <h2><%= @trip.name %></h2>
 
-<h3><%= @trip.duration %></h3>
+<h5><%= @trip.duration %></h5>
 
-
+<ul class="collapsible" data-collapsible="accordion">
   <% @trip.locations.each do |location| %>
-    <div class="">
-      <h1><%= location.city %></h1>
+  <li class="collapsible-header active"><i class="material-icons">place</i>
+    <h4><%= location.city %></h4>
       <%= link_to 'Show Location', trip_location_path(@trip, location) %>
-    </div>
+  </li>
   <% end %>
+</ul>
   <%= link_to 'Add Locations', new_trip_location_path(@trip) %>
   <%= link_to 'Back to Trips', root_path %>
+
+    <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
