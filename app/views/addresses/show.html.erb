@@ -1,2 +1,8 @@
 <h1>Addresses#show</h1>
 <p>Find me in app/views/addresses/show.html.erb</p>
+
+<% if @location.address != nil %>
+  <%= link_to 'Edit Address', edit_location_address_path(@location, @location.address) %>
+<% end %>
+<%= link_to 'Delete Address', location_address_path(@location, @location.address), method: :delete %>
+<%= link_to 'Back to Trip', root_path(@trip) %>
