@@ -7,7 +7,7 @@ class LocationsController < ApplicationController
   end
 
   def show
-
+    
   end
 
   def new
@@ -42,7 +42,7 @@ class LocationsController < ApplicationController
 
   private
 
-  def set_trip
+    def set_trip
       @trip = Trip.find(params[:trip_id])
     end
 

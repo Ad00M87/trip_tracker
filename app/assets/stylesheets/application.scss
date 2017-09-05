@@ -8,8 +8,16 @@ a {
   color: white;
 }
 
+.btn {
+  background: #00e5ff;
+}
+
 body {
-  background-image: image-url('sky.jpg');
+  background-image: image-url('lake.jpg');
   background-size: cover;
 
+}
+
+.bg-format {
+  background: rgba(144,164,174,.5)
 }

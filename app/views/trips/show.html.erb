@@ -1,11 +1,11 @@
 <h2 class="white-text"><%= @trip.name %></h2>
 
-<h5 class="white-text"><%= @trip.duration %></h5>
+<h5 class="white-text">Trip-length: <%= @trip.duration %></h5>
 
-<ul class="collapsible blue-grey lighten-4" data-collapsible="accordion">
+<ul class="collapsible transparent" data-collapsible="accordion">
   <% @trip.locations.each do |location| %>
   <li >
-    <div class="collapsible-header">
+    <div class="collapsible-header bg-format">
       <i class="material-icons">place</i>
       <h4><%= location.city %></h4>
     </div>
