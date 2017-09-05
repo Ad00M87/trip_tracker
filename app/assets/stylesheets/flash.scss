@@ -1,0 +1,16 @@
+.flash {
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.flash.alert {
+  background-color: rgba(254, 0, 0, 0.57);
+  color: white;
+}
+
+.flash.notice {
+  background-color: rgba(33, 166, 175, 0.71);
+}
