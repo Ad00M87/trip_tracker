@@ -17,6 +17,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'jquery-rails'
 gem 'materialize-sass'
+gem 'bcrypt', platforms: :ruby
+
+# source 'https://github.com/mkhairi/materialize-sass'
+
+# gem 'materialize-sass'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

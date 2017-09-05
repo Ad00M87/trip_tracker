@@ -1,21 +1,31 @@
 <h2><%= @location.city %>, <%= @location.state %> - <%= @location.country %></h2>
 
 <% if @location.address != nil %>
-  <h2><%= @location.address.street %></h2>
-  <h2><%= @location.address.city %></h2>
-  <h2><%= @location.address.state %></h2>
-  <h2><%= @location.address.zip %></h2>
+  <h4><%= @location.address.street %></h4>
+  <h4><%= @location.address.city %></h4>
+  <h4><%= @location.address.state %></h4>
+  <h4><%= @location.address.zip %></h4>
 <% else %>
   <h4><%= 'There is no address associated with this location. Please create one' %></h4>
 <% end %>
 
 
 <% if @location.address != nil %>
-  <%= link_to 'Edit Address', edit_location_address_path(@location, @location.address) %>
+	<div class="waves-effect waves-light btn">
+	  <%= link_to 'Edit Address', edit_location_address_path(@location, @location.address) %>
+  </div>
 <% else %>
-  <%= link_to 'Add Address', new_location_address_path(@location) %>
+	<div class="waves-effect waves-light btn">
+	  <%= link_to 'Add Address', new_location_address_path(@location) %>
+	</div>
 <% end %>
-<%= link_to 'Edit Location', edit_trip_location_path(@trip, @location) %>
-<%= link_to 'Delete Location', trip_location_path(@trip, @location), method: :delete %>
 
-<%= link_to 'Back to Trip', trip_path(@trip) %>
+<div class="waves-effect waves-light btn">
+	<%= link_to 'Edit Location', edit_trip_location_path(@trip, @location) %>
+</div>
+<div class="waves-effect waves-light btn">
+	<%= link_to 'Delete Location', trip_location_path(@trip, @location), method: :delete %>
+</div>
+<div class="waves-effect waves-light btn">
+	<%= link_to 'Back to Trip', trip_path(@trip) %>
+</div>

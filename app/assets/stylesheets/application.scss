@@ -1,12 +1,15 @@
 @import 'materialize';
+@import 'trips';
+@import 'locations';
+@import 'addresses';
 
-.nav-wrapper {
-  background-image: image-url('roadmap.png');
+
+a {
+  color: white;
 }
 
-.logo {
-  height: 75%;
-  width: 25%;
-  margin-left: -10px;
-  padding-left: 0;
+body {
+  background-image: image-url('sky.jpg');
+  background-size: cover;
+
 }
