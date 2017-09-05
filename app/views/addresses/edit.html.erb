@@ -16,7 +16,12 @@
 <%= f.label :location_id, 'Please do not change this number - it is needed to create a new address' %>
 <%= f.number_field :location_id, :value => @location.id %>
 
-<%= f.submit %>
+<div class="waves-effect waves-light btn">
+	<%= f.submit %>
+</div>
+
+<div class="waves-effect waves-light btn">
+<%= link_to 'Back to Location', location_address_path(@location) %>
 </div>
 
 <% end %>

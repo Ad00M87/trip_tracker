@@ -18,6 +18,7 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'materialize-sass'
 gem 'bcrypt', platforms: :ruby
+gem 'httparty'
 
 # source 'https://github.com/mkhairi/materialize-sass'
 

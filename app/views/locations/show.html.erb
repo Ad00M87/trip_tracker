@@ -1,5 +1,7 @@
 <h2><%= @location.city %>, <%= @location.state %> - <%= @location.country %></h2>
 
+<%= @google_maps %>
+
 <% if @location.address != nil %>
   <h4><%= @location.address.street %></h4>
   <h4><%= @location.address.city %></h4>

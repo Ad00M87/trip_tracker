@@ -3,7 +3,10 @@ class LocationsController < ApplicationController
   before_action :set_location, except: [:index, :new, :create]
 
   def index
-    @location = @trip.locations.all
+    # @location = @trip.locations.all
+    @google_maps = HTTParty.get("https.google.com/maps/embed/v1/place?q=Harrods,Brompton%20Rd&zoom=17&key=AIzaSyAndZiIvR2LIOIfoS_u2GrXvwxN4BZybTc")
+    binding.pry
+    render json: instagram
   end
 
   def show

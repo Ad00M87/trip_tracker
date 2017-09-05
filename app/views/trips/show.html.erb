@@ -4,16 +4,27 @@
 
 <ul class="collapsible" data-collapsible="accordion">
   <% @trip.locations.each do |location| %>
-  <li class="collapsible-header active"><i class="material-icons">place</i>
-    <h4><%= location.city %></h4>
-      <%= link_to 'Show Location', trip_location_path(@trip, location) %>
+  <li>
+    <div class="collapsible-header"><i class="material-icons">place</i>
+      <h4><%= location.city %></h4>
+    </div>
+    <div class="collapsible-body">
+      <span>
+        <%= link_to 'Show Location', trip_location_path(@trip, location) %>
+        <p>content for address.html.erb will be linked here through a variable</p>
+      </span>
+    </div>
   </li>
   <% end %>
 </ul>
-  <%= link_to 'Add Locations', new_trip_location_path(@trip) %>
-  <%= link_to 'Back to Trips', root_path %>
+  <div class="waves-effect waves-light btn">
+    <%= link_to 'Add Location', new_trip_location_path(@trip) %>
+  </div>
+  <div class="waves-effect waves-light btn">
+    <%= link_to 'Back to Trips', root_path %>
+  </div>
 
-    <ul class="collapsible" data-collapsible="accordion">
+<!--     <ul class="collapsible" data-collapsible="accordion">
     <li>
       <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
@@ -27,3 +38,4 @@
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
     </li>
   </ul>
+ -->

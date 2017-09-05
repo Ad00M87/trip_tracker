@@ -1,14 +1,9 @@
-<h1>Address</h1>
-<p>Address</p>
-
 <% if @location.address != nil %>
   <h2>street: <%= @location.address.street %></h2>
   <h2>city: <%= @location.address.city %></h2>
   <h2>state: <%= @location.address.state %></h2>
   <h2>zip: <%= @location.address.zip %></h2>
 <% end %>
-
-
 
 <% if @location.address != nil %>
   <%= link_to 'Edit Address', edit_location_address_path(@location, @location.address) %>
