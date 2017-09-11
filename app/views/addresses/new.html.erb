@@ -20,3 +20,14 @@
 </div>
 
 <% end %>
+
+<!-- https://www.google.com/maps/place/370+300+E,+Salt+Lake+City,+UT+84111
+
+http://www.google.com/maps/place/ (split street join +) + ',+' (split city join +) + ',+' (State) + '+' (zip code)
+
+address = 'http://www.google.com/maps/place/' + street + ',+' +
+
+street = street.strip.split(' ').join('+')
+city = city.strip.split(' ').join('+')
+state = state.strip.split(' ').join('+')
+zip = zip.strip -->

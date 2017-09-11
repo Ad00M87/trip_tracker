@@ -30,6 +30,13 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry'
   gem 'faker'
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
+  gem 'database_cleaner'
+  gem 'simplecov'
 end
 
 group :development do
